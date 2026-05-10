@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECURY | London Aesthetic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #F5F5F5;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-nav {
+            background: rgba(18, 18, 18, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-text {
+            font-size: clamp(3rem, 10vw, 8rem);
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+        }
+        .mono { font-family: 'Space Mono', monospace; font-size: 0.75rem; color: #888; }
+        .card-brutal {
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        .card-brutal:hover {
+            border-color: #F5F5F5;
+            transform: translateY(-5px);
+        }
+        /* Grain Overlay */
+        .grain::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body class="grain">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav px-6 py-4 flex justify-between items-center">
+        <div class="font-bold text-xl tracking-tighter italic uppercase">MECURY</div>
+        <div class="hidden md:flex gap-8 mono uppercase tracking-widest">
+            <a href="#" class="hover:text-white text-[10px]">Collection</a>
+            <a href="#" class="hover:text-white text-[10px]">Archive</a>
+            <a href="#" class="hover:text-white text-[10px]">Contact</a>
+        </div>
+        <button class="bg-white text-black px-4 py-1 text-[10px] font-bold hover:bg-zinc-200 transition uppercase">Join the Club</button>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center px-6 pt-20">
+        <p class="mono mb-4 uppercase tracking-widest">[ VOL. 01 / 2026 ]</p>
+        <h1 class="hero-text font-bold uppercase">STREET<br>CULTURE<br>LONDON.</h1>
+        <div class="mt-8 flex justify-between items-end">
+            <p class="max-w-xs text-zinc-400 text-sm leading-relaxed uppercase tracking-tight">
+                Brutalist aesthetics meets urban functionalism. The clean boy blueprint for the modern era.
+            </p>
+            <div class="mono hidden sm:block">LONDON // UTC+0</div>
+        </div>
+    </section>
+
+    <section class="px-6 py-20 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="card-brutal p-8 md:col-span-2 aspect-video bg-zinc-900 flex flex-col justify-end relative overflow-hidden">
+             <div class="absolute inset-0 opacity-30 bg-[url('https://images.unsplash.com/photo-1529712750352-321157297920?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center"></div>
+             <div class="relative z-10">
+                <h2 class="text-3xl font-medium uppercase italic">The Lookbook</h2>
+                <p class="text-zinc-500 mono uppercase tracking-widest">Archive 01 — Coming Soon</p>
+             </div>
+        </div>
+        <div class="card-brutal p-8 aspect-square bg-white text-black flex flex-col justify-between">
+            <span class="mono">01. ESSENTIALS</span>
+            <p class="text-2xl font-bold leading-tight uppercase">Muted Palettes & Heavy Silhouettes.</p>
+        </div>
+        <div class="card-brutal p-8 aspect-square bg-zinc-950 flex flex-col justify-between">
+            <span class="mono">02. ETHOS</span>
+            <p class="text-2xl font-bold leading-tight uppercase italic">"Minimal Effort. Maximum Impact."</p>
+        </div>
+        <div class="card-brutal p-8 md:col-span-2 aspect-video bg-zinc-900 overflow-hidden relative">
+             <div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1520975173305-649069d25515?q=80&w=2070')] bg-cover bg-center"></div>
+             <div class="relative z-10 h-full flex flex-col justify-end">
+                <h2 class="text-3xl font-medium uppercase">City Soundscape</h2>
+             </div>
+        </div>
+    </section>
+
+    <footer class="p-6 border-t border-zinc-800 flex flex-col md:flex-row justify-between gap-8">
+        <div class="mono">© 2026 MECURY STUDIOS</div>
+        <div class="flex gap-4 mono">
+            <a href="https://www.facebook.com/share/1PTQN8MRGA/?mibextid=wwXIfr" class="hover:text-white transition">FACEBOOK</a>
+            <a href="#" class="hover:text-white transition">INSTAGRAM</a>
+            <a href="#" class="hover:text-white transition">TIKTOK</a>
+        </div>
+    </footer>
+
+</body>
+</html>
